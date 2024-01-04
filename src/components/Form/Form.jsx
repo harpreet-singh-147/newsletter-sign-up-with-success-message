@@ -22,7 +22,7 @@ const Form = () => {
           </ul>
           <div class='newsletter__form-group'>
             <div class='newsletter__form-input-container'>
-              <label for='firstName' class='newsletter__form-label'>
+              <label for='email' class='newsletter__form-label'>
                 Email address
               </label>
               <input
@@ -31,7 +31,7 @@ const Form = () => {
                 id='email'
                 name='email'
                 class='newsletter__form-input'
-                aria-describedby='firstNameError'
+                aria-describedby='emailError'
                 aria-required='true'
                 aria-invalid='false'
                 autofocus
