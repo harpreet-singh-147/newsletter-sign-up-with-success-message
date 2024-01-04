@@ -1,0 +1,32 @@
+.newsletter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.newsletter__form {
+  background: var(--white);
+  border-radius: 3.5em;
+  width: 928px;
+  height: 640px;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.newsletter__form-content {
+  flex: 1.07;
+}
+
+.newsletter__form-img-container {
+  background: url('../../assets/images/illustration-sign-up-desktop.svg')
+    no-repeat;
+  background-size: auto;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  outline: 2px solid red;
+  flex: 1;
+}

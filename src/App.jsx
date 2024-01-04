@@ -4,11 +4,10 @@ import Footer from './components/Footer/Footer';
 
 const App = () => {
   return (
-    <>
+    <main>
       <Form />
-      <Success />
       <Footer />
-    </>
+    </main>
   );
 };
 
