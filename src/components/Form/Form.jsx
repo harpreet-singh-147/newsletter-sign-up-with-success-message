@@ -20,9 +20,9 @@ const Form = () => {
             </li>
             <li className='newsletter__form-list-item'>And much more!</li>
           </ul>
-          <div class='newsletter__form-group'>
-            <div class='newsletter__form-input-container'>
-              <label for='email' class='newsletter__form-label'>
+          <div className='newsletter__form-group'>
+            <div className='newsletter__form-input-container'>
+              <label for='email' className='newsletter__form-label'>
                 Email address
               </label>
               <input
@@ -30,7 +30,7 @@ const Form = () => {
                 placeholder='email@company.com '
                 id='email'
                 name='email'
-                class='newsletter__form-input'
+                className='newsletter__form-input'
                 aria-describedby='emailError'
                 aria-required='true'
                 aria-invalid='false'
@@ -38,13 +38,18 @@ const Form = () => {
               />
             </div>
             <span
-              class='newsletter__form-error'
-              id='firstNameError'
+              className='newsletter__form-error'
+              id='emailError'
               aria-live='polite'
             >
               Valid email required
             </span>
-            <button>Subscribe to monthly newsletter</button>
+            <button
+              className='newsletter__form-btn-submit'
+              aria-label='Subscribe to monthly newsletter for product management updates'
+            >
+              Subscribe to monthly newsletter
+            </button>
           </div>
         </section>
         <div className='newsletter__form-img-container'></div>
