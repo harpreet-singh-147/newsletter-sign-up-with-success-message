@@ -1,13 +1,15 @@
+import './Footer.css';
+
 const Footer = () => {
   return (
-    <footer class='attribution'>
+    <footer className='attribution'>
       Challenge by{' '}
       <a
         href='https://www.frontendmentor.io?ref=challenge'
         target='_blank'
         aria-label='Visit Frontend Mentor Website'
         rel='noopener noreferrer'
-        referrerpolicy='no-referrer'
+        referrerPolicy='no-referrer'
       >
         Frontend Mentor
       </a>
@@ -18,7 +20,7 @@ const Footer = () => {
         aria-label='More about Harpreet Singh'
         target='_blank'
         rel='noopener noreferrer'
-        referrerpolicy='no-referrer'
+        referrerPolicy='no-referrer'
       >
         Harpreet Singh.
       </a>

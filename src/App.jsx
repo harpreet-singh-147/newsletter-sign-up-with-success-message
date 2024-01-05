@@ -1,13 +1,14 @@
 import Form from './components/Form/Form';
-import Success from './components/Success/Success';
+import SuccessModal from './components/SuccessModal/SuccessModal';
 import Footer from './components/Footer/Footer';
 
 const App = () => {
   return (
-    <main>
+    <>
       <Form />
+      <SuccessModal />
       <Footer />
-    </main>
+    </>
   );
 };
 

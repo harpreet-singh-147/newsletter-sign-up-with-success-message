@@ -1,0 +1,118 @@
+.success-modal {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  margin: 0 auto;
+  border: none;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+}
+
+.success-modal--visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.success-modal__content {
+  background: var(--white);
+  color: var(--dark-slate-grey);
+  min-height: 520px;
+  width: 506px;
+  border-radius: 4rem;
+  padding: 4.78rem 6.58rem;
+}
+
+.success-modal__header {
+  font-size: 3.7rem;
+  padding-top: 3.9rem;
+  line-height: 1;
+}
+
+.success-modal__text {
+  font-size: 1.6rem;
+  padding-top: 2.55rem;
+  line-height: 1.45;
+}
+
+.success-modal__footer {
+  padding-top: 4.1rem;
+}
+
+.success-modal__btn {
+  width: 100%;
+  border: none;
+  border-radius: 0.8rem;
+  font-family: inherit;
+  background: var(--dark-slate-grey);
+  padding: 2rem 2rem;
+  color: var(--white);
+  font-size: 1.54rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.success-modal__btn:hover,
+.success-modal__btn:active {
+  background: var(--tomato);
+  box-shadow: 0 15px 25px -5px var(--tomato);
+}
+
+.success-modal__btn:focus {
+  outline: 4px solid var(--tomato);
+  outline-offset: 2px;
+}
+
+@media only screen and (max-width: 540px) {
+  .success-modal__content {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .success-modal {
+    height: 100vh;
+    background: var(--white);
+    overflow: hidden;
+  }
+
+  .success-modal__content {
+    height: inherit;
+    border-radius: 0;
+    padding: 13rem 2.2rem 5rem 2.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .success-modal__header {
+    font-size: 3.7rem;
+    padding-top: 0;
+    line-height: 1;
+  }
+
+  .success-modal__text {
+    font-size: 1.6rem;
+    padding-top: 0;
+    line-height: 1.45;
+  }
+
+  .success-modal__footer {
+    margin-top: auto;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .success-modal__header {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 310px) {
+  .success-modal__header {
+    font-size: 2.5rem;
+  }
+}
