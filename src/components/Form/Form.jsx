@@ -11,6 +11,7 @@ const Form = () => {
   const [successModal, setSuccessModal] = useState(false);
   const [isNewsletterVisible, setIsNewsletterVisible] = useState(true);
   const [showNewsletter, setShowNewsletter] = useState(true);
+  const [submittedEmail, setSubmittedEmail] = useState('');
 
   const emailInput = useRef(null);
 
@@ -39,6 +40,7 @@ const Form = () => {
 
       if (Object.keys(validationErrors).length === 0) {
         console.log('Form Data Submitted:', formData);
+        setSubmittedEmail(formData.email);
         setIsNewsletterVisible(false);
         setTimeout(() => {
           setShowNewsletter(false);
@@ -174,6 +176,8 @@ const Form = () => {
           setSuccessModal={setSuccessModal}
           setIsNewsletterVisible={setIsNewsletterVisible}
           setShowNewsletter={setShowNewsletter}
+          email={submittedEmail}
+          setSubmittedEmail={setSubmittedEmail}
         />
       ) : null}
     </main>

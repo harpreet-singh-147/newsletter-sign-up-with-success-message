@@ -8,6 +8,8 @@ const SuccessModal = ({
   setSuccessModal,
   setIsNewsletterVisible,
   setShowNewsletter,
+  email,
+  setSubmittedEmail,
 }) => {
   const [isVisible, setIsVisible] = useState(successModal);
   const dialogRef = useRef(null);
@@ -22,7 +24,7 @@ const SuccessModal = ({
         }
       } else if (successModal && !isVisible) {
         setIsNewsletterVisible(true);
-
+        setSubmittedEmail('');
         timeout = setTimeout(() => {
           dialogRef.current.close();
           setShowNewsletter(true);
@@ -55,9 +57,9 @@ const SuccessModal = ({
             </h2>
           </header>
           <p className='success-modal__text'>
-            A confirmation email has been sent to{' '}
-            <strong>ash@loremcompany.com</strong>. Please open it and click the
-            button inside to confirm your subscription.
+            A confirmation email has been sent to <strong>{email}</strong>.
+            Please open it and click the button inside to confirm your
+            subscription.
           </p>
           <footer className='success-modal__footer'>
             <button
