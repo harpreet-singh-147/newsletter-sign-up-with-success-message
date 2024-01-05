@@ -40,12 +40,25 @@ const SuccessModal = ({
     };
   }, [isVisible]);
 
+  const handleclose = e => {
+    e.preventDefault();
+    setIsNewsletterVisible(true);
+    setSubmittedEmail('');
+    setTimeout(() => {
+      dialogRef.current.close();
+      setShowNewsletter(true);
+      setSuccessModal(false);
+    }, 200);
+  };
+
   return (
     <>
       <dialog
         className={`success-modal ${isVisible ? 'success-modal--visible' : ''}`}
         ref={dialogRef}
         aria-labelledby='successModalTitle'
+        onClose={handleclose}
+        onCancel={handleclose}
       >
         <div className='success-modal__content'>
           <div className='success-modal__icon-container'>
