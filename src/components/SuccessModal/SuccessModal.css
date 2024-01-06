@@ -2,18 +2,14 @@
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
-  background: transparent;
+  border-radius: 4rem;
   margin: 0 auto;
-  border: none;
-  padding: 0;
   opacity: 0;
-  visibility: hidden;
   transition: all 0.2s ease;
 }
 
 .success-modal--visible {
   opacity: 1;
-  visibility: visible;
 }
 
 .success-modal__content {
@@ -21,7 +17,6 @@
   color: var(--dark-slate-grey);
   min-height: 520px;
   width: 506px;
-  border-radius: 4rem;
   padding: 4.78rem 6.58rem;
 }
 
