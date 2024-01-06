@@ -70,14 +70,20 @@
 @media only screen and (max-width: 500px) {
   .success-modal {
     height: 100vh;
+    height: 100svh;
     background: var(--white);
-    overflow: hidden;
+    border-radius: 0;
+    border: none;
+  }
+
+  .success-modal::backdrop {
+    background: white;
   }
 
   .success-modal__content {
-    height: inherit;
+    height: 100%;
     border-radius: 0;
-    padding: 13rem 2.2rem 5rem 2.2rem;
+    padding: 13rem 2.2rem 0 2.2rem;
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -97,6 +103,8 @@
 
   .success-modal__footer {
     margin-top: auto;
+    padding-top: 0;
+    padding-bottom: 3rem;
   }
 }
 
